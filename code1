@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+int flag[1005];
+int main()
+{
+	int n,k,a,ans=0;
+	scanf("%d %d",&n,&k);
+	int mid=round(n*1.0/2),m=0;
+	while(n--)
+	{
+		scanf("%d",&a);
+		flag[a]++;
+	}
+	sort(flag+1,flag+1+k);
+	for(int i=k;i>=1;i--)
+	{
+		if(flag[i]>=2)
+		{
+			m+=flag[i]/2;
+			flag[i]%=2;
+		}
+	}
+	if(mid>m)
+	printf("%d",2*m+mid-m);
+	else
+	printf("%d",2*m);
+}
