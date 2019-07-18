@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int n,k,a;
+	scanf("%d %d",&n,&k);
+	a=2*(n+k);
+	int d;d=9+4*a;
+	int ans;ans=(-3+sqrt(d))/2;
+	printf("%d",n-ans);
+}
+//1 2 1 1 1
+
+刚才学姐让我晚上去讲首A题，我拒绝了,并推荐了你（虽然不知道有什么用，虽然我是在骗你
